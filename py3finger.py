@@ -176,6 +176,9 @@ class PyFinger(object):
     def new_from_response(self, response):
         return self.analyze_with_categories(Req(response.url, html=response.text, headers=response.headers))
 
+    def new_from_html(self, html, header):
+        return self.analyze_with_categories(Req("https://www.runoob.com/", html=html, headers=header))
+
 
 if __name__ == "__main__":
     pyfinger = PyFinger()
