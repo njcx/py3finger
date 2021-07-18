@@ -179,7 +179,9 @@ class PyFinger(object):
 
 if __name__ == "__main__":
     pyfinger = PyFinger()
+    req = requests.get('https://www.runoob.com/')
     print(pyfinger.new_from_url('https://www.runoob.com/'))
+    print(pyfinger.new_from_response(req))
 
 
 
